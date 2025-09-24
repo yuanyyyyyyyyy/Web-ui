@@ -1,0 +1,70 @@
+<!-- 3.3 HTML表格与表单标签的应用
+表格用于展示结构化数据，表单用于收集用户输入。 -->
+
+<h2>3. 表格</h2>
+<table border="1"> <!-- 添加边框便于观察，实际应用中用CSS控制样式 -->
+  <caption>学生信息表</caption> <!-- 表格标题 -->
+  <thead> <!-- 表头 -->
+    <tr> <!-- 表行 -->
+      <th>学号</th> <th>姓名</th> <th>专业</th> <!-- 表头单元格 -->
+    </tr>
+  </thead>
+  <tbody> <!-- 表体 -->
+    <tr>
+      <td>2021001</td> <td>小明</td> <td>计算机科学</td> <!-- 标准单元格 -->
+    </tr>
+    <tr>
+      <td>2021002</td> <td>小红</td> <td>软件工程</td>
+    </tr>
+  </tbody>
+  <tfoot> <!-- 表脚 -->
+    <tr>
+      <td colspan="3">注：此为示例数据</td> <!-- colspan跨列 -->
+    </tr>
+  </tfoot>
+</table>
+
+<h2>4. 表单</h2>
+<form action="/submit-handler" method="POST"> 
+  <fieldset> 
+    <legend>用户登录</legend> 
+
+    <label for="username">用户名:</label> 
+    <input type="text" id="username" name="username" required placeholder="请输入用户名"><br><br>
+
+    <label for="password">密码:</label>
+    <input type="password" id="password" name="password" required><br><br>
+
+    <label for="avatar">上传头像:</label>
+    <input type="file" id="avatar" name="avatar" accept="image/*"><br><br>
+
+    <label for="country">国家:</label>
+    <select id="country" name="country">
+      <option value="">--请选择--</option>
+      <option value="china">中国</option>
+      <option value="usa">美国</option>
+    </select><br><br>
+
+    <label>性别:</label>
+    <input type="radio" id="male" name="gender" value="male">
+    <label for="male">男</label>
+    <input type="radio" id="female" name="gender" value="female">
+    <label for="female">女</label><br><br>
+
+    <label>兴趣（可多选）:</label>
+    <input type="checkbox" id="coding" name="hobbies" value="coding">
+    <label for="coding">编程</label>
+    <input type="checkbox" id="music" name="hobbies" value="music">
+    <label for="music">音乐</label>
+    <input type="checkbox" id="sports" name="hobbies" value="sports">
+    <label for="sports">运动</label><br><br>
+
+    <label for="message">个人简介:</label><br>
+    <textarea id="message" name="message" rows="4" cols="40" placeholder="介绍一下你自己..."></textarea><br><br>
+
+    <button type="submit">提交</button>
+    <button type="reset">重置</button>
+    <button type="button" onclick　　　　　　　　="aler　t('Hello!')">普通按钮</button> 
+  </fieldset>
+</form>
+
