@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>简单计算器</title>
+    <style>
+        body { font-family: Arial; margin: 20px; }
+        table { border-collapse: collapse; }
+        td { border: 1px solid #000; width: 50px; height: 40px; text-align: center; }
+        input { width: 210px; height: 40px; margin-bottom: 10px; text-align: right; font-size: 18px; }
+    </style>
+</head>
+<body>
+    <input type="text" id="txtResult" value="0" readonly>
+    <table>
+        <tr>
+            <td onclick="doInputNumber('7')"><b>7</b></td>
+            <td onclick="doInputNumber('8')"><b>8</b></td>
+            <td onclick="doInputNumber('9')"><b>9</b></td>
+            <td onclick="doInputOperator('/')"><b>/</b></td>
+        </tr>
+        <tr>
+            <td onclick="doInputNumber('4')"><b>4</b></td>
+            <td onclick="doInputNumber('5')"><b>5</b></td>
+            <td onclick="doInputNumber('6')"><b>6</b></td>
+            <td onclick="doInputOperator('*')"><b>*</b></td>
+        </tr>
+        <tr>
+            <td onclick="doInputNumber('1')"><b>1</b></td>
+            <td onclick="doInputNumber('2')"><b>2</b></td>
+            <td onclick="doInputNumber('3')"><b>3</b></td>
+            <td onclick="doInputOperator('-')"><b>-</b></td>
+        </tr>
+        <tr>
+            <td onclick="doInputNumber('0')"><b>0</b></td>
+            <td onclick="clearDisplay()"><b>C</b></td>
+            <td onclick="doInputEqual()"><b>=</b></td>
+            <td onclick="doInputOperator('+')"><b>+</b></td>
+        </tr>
+    </table>
+
+<script>
+   var operator; 
+   var num1="",num2="";  
+   var operFlag = false;
+   
+   function doInputNumber(x){
+        var obj = document.getElementById("txtResult");
+        if(obj.value === "0" || obj.value === "Error") obj.value = x;
+        else obj.value = obj.value + x;
+        
+        if(operFlag) num2 = obj.value.substring(num1.length + 1);
+        else num1 = obj.value;
+    }
+    
+    function doInputOperator(x){
+        operFlag = true;
+        num1 = document.getElementById("txtResult").value;
+        operator = x;     
+        var obj = document.getElementById("txtResult");
+        obj.value = obj.value + x;
+    }
+    
+    function doInputEqual(){
+       var result;
+       if(operator == "+") result = parseInt(num1) + parseInt(num2);
+       else if(operator == "-") result = parseInt(num1) - parseInt(num2);
+       else if(operator == "*") result = parseInt(num1) * parseInt(num2);
+       else if(operator == "/") result = parseInt(num1) / parseInt(num2);
+
+       var obj = document.getElementById("txtResult");
+       obj.value = result;
+       num1 = result.toString();
+       num2 = "";
+       operFlag = false;
+    }
+    
+    function clearDisplay(){
+        document.getElementById("txtResult").value = "0";
+        num1 = "";
+        num2 = "";
+        operFlag = false;
+    }
+</script>
+</body>
+</html>
