@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>用户注册</title>
+    <style>
+        .radio-group, .checkbox-group {
+            display: flex;
+            gap: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>用户注册</h1>
+        <form id="registrationForm">
+            <div class="form-group">
+                <label for="username" class="required">用户名：</label>
+                <input type="text" id="username" name="username" required placeholder="请输入用户名">
+            </div>
+            
+            <div class="form-group">
+                <label for="password" class="required">密码：</label>
+                <input type="password" id="password" name="password" required placeholder="请输入密码">
+                <div class="form-note">密码长度至少8位，包含字母和数字</div>
+            </div>
+            
+            <div class="form-group">
+                <label class="required">性别：</label>
+                <div class="radio-group">
+                    <div class="radio-option">
+                        <input type="radio" id="male" name="gender" value="male" required>
+                        <label for="male">男</label>
+                    </div>
+                    <div class="radio-option">
+                        <input type="radio" id="female" name="gender" value="female">
+                        <label for="female">女</label>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label>爱好：</label>
+                <div class="checkbox-group">
+                    <div class="checkbox-option">
+                        <input type="checkbox" id="football" name="hobbies" value="football">
+                        <label for="football">足球</label>
+                    </div>
+                    <div class="checkbox-option">
+                        <input type="checkbox" id="basketball" name="hobbies" value="basketball">
+                        <label for="basketball">篮球</label>
+                    </div>
+                    <div class="checkbox-option">
+                        <input type="checkbox" id="reading" name="hobbies" value="reading">
+                        <label for="reading">阅读</label>
+                    </div>
+                    <div class="checkbox-option">
+                        <input type="checkbox" id="movies" name="hobbies" value="movies">
+                        <label for="movies">看电影</label>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label for="province" class="required">所在省份：</label>
+                <select id="province" name="province" required>
+                    <option value="">-- 请选择省份 --</option>
+                    <option value="beijing">北京市</option>
+                    <option value="tianjin">天津市</option>
+                    <option value="hebei">河北省</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="introduction">个人介绍：</label>
+                <textarea id="introduction" name="introduction" placeholder="请介绍一下你自己..."></textarea>
+            </div>
+            
+            <button type="submit" class="submit-btn">提交</button>
+        </form>
+    </div>
+</body>
+</html>
