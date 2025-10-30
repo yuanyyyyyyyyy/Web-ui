@@ -1,0 +1,45 @@
+<!-- 实现收货人信息的表单，实现如下图效果，且输入框获取焦点后，边框变为红色。 -->
+<!DOCTYPE html>
+<html lang="zh-CN>
+    <head> 
+    <meta charset="UTF-8">
+    <title>收货人信息表单</title>
+    <style>
+    </style>
+    </head>
+</html>
+
+<body>
+    <form>
+        <label> <div>收货人</div> </label>
+        <input type = "text" name = "收货人" >
+
+        <label> <div>手机号码</div> </label>
+        <input type = "text" name = "手机号码" >
+
+        <label> <div>所在地区</div> </label>
+        <input type = "text" name = "所在地区" >
+
+        <label>
+            <div>详细地址</div>
+            <textarea name = "详细地址"> </textarea>
+        </label>
+
+        <label> 
+            <div>标签</div>
+            <input type = "radio" name = "标签" value = "家" checked> 家
+            <input type = "radio" name = "标签" value = "公司"> 公司
+            <input type = "radio" name = "标签" value = "学校"> 学校
+        </label>
+
+        <div> 
+            设置为默认地址
+        </div>
+
+        <div>
+            <input type = "button" value = "提交">
+        </div>
+    </form>
+
+
+</body>

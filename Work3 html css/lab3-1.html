@@ -1,0 +1,263 @@
+ <!-- 阐述CSS盒子相关概念，给出CSS盒子模型实例相关代码（放入学习通的代码块中显示），给出在浏览器中的实现效果截图。(10')  -->
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS盒子模型实例</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f5f5f5;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        h1 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .box-model-explanation {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 30px;
+        }
+        
+        .box-visualization {
+            width: 45%;
+            position: relative;
+        }
+        
+        .box-diagram {
+            width: 200px;
+            height: 200px;
+            margin: 0 auto;
+            position: relative;
+        }
+        
+        .margin {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #ffebee;
+            border: 1px dashed #f44336;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .border {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            width: 160px;
+            height: 160px;
+            background-color: #e3f2fd;
+            border: 2px solid #2196f3;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .padding {
+            position: absolute;
+            top: 40px;
+            left: 40px;
+            width: 120px;
+            height: 120px;
+            background-color: #e8f5e9;
+            border: 1px dashed #4caf50;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .content {
+            position: absolute;
+            top: 60px;
+            left: 60px;
+            width: 80px;
+            height: 80px;
+            background-color: #fff3e0;
+            border: 1px solid #ff9800;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+        
+        .box-examples {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-top: 30px;
+        }
+        
+        .example-box {
+            padding: 15px;
+            border: 2px solid #333;
+            margin: 10px;
+            background-color: #f9f9f9;
+        }
+        
+        .example1 {
+            width: 200px;
+            height: 100px;
+            padding: 10px;
+            border: 5px solid #4caf50;
+            margin: 15px;
+        }
+        
+        .example2 {
+            width: 250px;
+            padding: 20px;
+            border: 3px dashed #2196f3;
+            margin: 10px auto;
+        }
+        
+        .example3 {
+            width: 180px;
+            height: 120px;
+            padding: 15px 25px;
+            border: 8px double #ff9800;
+            margin: 5px 20px;
+        }
+        
+        .code-block {
+            background-color: #f8f8f8;
+            border-left: 4px solid #4caf50;
+            padding: 15px;
+            margin: 15px 0;
+            font-family: 'Courier New', monospace;
+            white-space: pre-wrap;
+            overflow-x: auto;
+        }
+        
+        .legend {
+            margin-top: 20px;
+        }
+        
+        .legend-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 5px;
+        }
+        
+        .color-box {
+            width: 20px;
+            height: 20px;
+            margin-right: 10px;
+            border: 1px solid #999;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>CSS盒子模型详解</h1>
+        
+        <div class="box-model-explanation">
+            <div class="box-visualization">
+                <h2>盒子模型可视化</h2>
+                <div class="box-diagram">
+                    <div class="margin">外边距(Margin)</div>
+                    <div class="border">边框(Border)</div>
+                    <div class="padding">内边距(Padding)</div>
+                    <div class="content">内容(Content)</div>
+                </div>
+                
+                <div class="legend">
+                    <div class="legend-item">
+                        <div class="color-box" style="background-color: #ffebee;"></div>
+                        <span>外边距(Margin) - 透明区域，盒子与其他元素之间的间隔</span>
+                    </div>
+                    <div class="legend-item">
+                        <div class="color-box" style="background-color: #e3f2fd;"></div>
+                        <span>边框(Border) - 围绕内容和内边距的线条</span>
+                    </div>
+                    <div class="legend-item">
+                        <div class="color-box" style="background-color: #e8f5e9;"></div>
+                        <span>内边距(Padding) - 内容与边框之间的透明区域</span>
+                    </div>
+                    <div class="legend-item">
+                        <div class="color-box" style="background-color: #fff3e0;"></div>
+                        <span>内容(Content) - 显示文本、图像等实际内容</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="box-visualization">
+                <h2>盒子模型计算公式</h2>
+                <p>总宽度 = margin-left + border-left + padding-left + width + padding-right + border-right + margin-right</p>
+                <p>总高度 = margin-top + border-top + padding-top + height + padding-bottom + border-bottom + margin-bottom</p>
+                
+                <div class="code-block">
+/* 标准盒子模型 */
+.box {
+    width: 200px;        /* 内容宽度 */
+    height: 100px;       /* 内容高度 */
+    padding: 20px;       /* 内边距 */
+    border: 5px solid #333; /* 边框 */
+    margin: 15px;        /* 外边距 */
+}
+
+/* 实际总宽度计算 */
+/* 200px (内容) + 40px (左右内边距) + 10px (左右边框) + 30px (左右外边距) = 280px */
+
+/* 实际总高度计算 */
+/* 100px (内容) + 40px (上下内边距) + 10px (上下边框) + 30px (上下外边距) = 180px */
+                </div>
+            </div>
+        </div>
+        
+        <h2>盒子模型实例</h2>
+        <div class="box-examples">
+            <div class="example-box example1">
+                盒子1: 固定宽高，均匀内边距
+            </div>
+            
+            <div class="example-box example2">
+                盒子2: 固定宽度，自动外边距实现居中
+            </div>
+            
+            <div class="example-box example3">
+                盒子3: 不同方向的内外边距
+            </div>
+        </div>
+        
+        <h2>box-sizing属性</h2>
+        <p>box-sizing属性可以改变盒子模型的计算方式：</p>
+        
+        <div class="code-block">
+/* 标准盒子模型 (默认) */
+.element {
+    box-sizing: content-box;
+    width: 200px;   /* 仅内容宽度为200px */
+    padding: 20px;  /* 总宽度会增加40px */
+    border: 5px solid #000; /* 总宽度再增加10px */
+    /* 实际总宽度: 200 + 40 + 10 = 250px */
+}
+
+/* 边框盒子模型 */
+.element {
+    box-sizing: border-box;
+    width: 200px;   /* 内容+内边距+边框总宽度为200px */
+    padding: 20px;  /* 内容宽度会减少40px */
+    border: 5px solid #000; /* 内容宽度再减少10px */
+    /* 实际内容宽度: 200 - 40 - 10 = 150px */
+}
+        </div>
+    </div>
+</body>
+</html>
