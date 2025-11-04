@@ -5,10 +5,58 @@
  padding: 10px;
  }
 
+ @font-face {
+    font-family: 'MyFont';
+    src: url('fonts/MyFont.woff2') format('woff2'),
+         url('fonts/MyFont.woff') format('woff');
+    font-weight:lighter;
+    font-style: normal;
+ }
+
+ #border{
+ width: 100px;
+ height: 100px;
+ background-Color: lightgray;
+ border-radius: 10px;
+ box-shadow:10px 10px 10px 5px gray;
+}
+
+#text{
+    text-align: center;
+    font-size: 20px;
+    color: light;
+    text-shadow: 2px 2px 25px blueviolet;
+    /* white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; */
+    transform: translateY(100px);
+    transform: scaleX(1);
+    transform: rotate(10deg);
+    /* 宽度发生变化时，触发过渡效果*/
+    transition:width 2s ease 0s;
+}
+#text:hover{
+    width: 200px;
+}
+/* 
+@media screen and (max-width: 600px){
+    #text{
+        font-size: 12px;
+        color: red;
+    }
+    
+} 
+ @media screen and (min-width: 200px){
+     #text{
+        width: 200px;
+    }
+ }  */
+
+
  .container{
  height: 300px;
  width: 600px;
- background: red;
+ background: lightblue;
  position: absolute;
 }
 
@@ -20,20 +68,31 @@
  }
  
  .block1{
- background: black;
+ background:radial-gradient(red, green,blue);
  position: absolute;
  top: 1px;
  left: 100px;
  float: left;
  }
  .block2{
- background: orange;
+ background: radial-gradient(red 5%, green 15%, blue 60%);
  position: relative;
  top: 100px;
  left: 2px;
  float: right;
  }
  .block3{
- background: yellowgreen;
+ background: radial-gradient(circle, red, green,blue);
  clear: both
  }
+
+ .wrapper{
+    display: grid; /* 转换为网格布局*/
+    grid-gap: 10px; /* 网格间距*/
+    grid-template-columns: repeat(4, 0.1fr); /* 四列等分布局*/
+    grid-template-rows: repeat(2, 10px); /* 两行，每行10px高*/
+ }
+
+ .col(
+
+ )

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>产品月销量</title>
+    <style>
+        body {
+            font-family: 'Microsoft YaHei', Arial, sans-serif;
+            background-color: #f5f7fa;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .container {
+            max-width: 600px;
+            width: 100%;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
+        
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 25px;
+            font-weight: 600;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        
+        th {
+            background-color: #4a6ee0;
+            color: white;
+            font-weight: 600;
+            padding: 12px 15px;
+            text-align: left;
+        }
+        
+        td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #e1e5eb;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #f8f9fa;
+        }
+        
+        tr:hover {
+            background-color: #f0f3ff;
+        }
+        
+        .total-row {
+            background-color: #e9ecef;
+            font-weight: bold;
+            color: #333;
+        }
+        
+        .total-row td {
+            border-bottom: none;
+            border-top: 2px solid #4a6ee0;
+        }
+        
+        .note {
+            text-align: center;
+            color: #666;
+            font-size: 14px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>产品月销量</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>产品名称</th>
+                    <th>销量</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>2021090901</td>
+                    <td>马克杯</td>
+                    <td>5000</td>
+                </tr>
+                <tr>
+                    <td>2021090901</td>
+                    <td>啤酒杯</td>
+                    <td>5200</td>
+                </tr>
+                <tr>
+                    <td>2021090901</td>
+                    <td>搪瓷杯</td>
+                    <td>3500</td>
+                </tr>
+                <tr class="total-row">
+                    <td colspan="2">合计</td>
+                    <td>13700</td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="note">数据更新日期：2023年10月</div>
+    </div>
+</body>
+</html>

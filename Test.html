@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>逛好店 - 京东风格</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: "Microsoft YaHei", Arial, sans-serif;
+            background-color: #f5f5f5;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+        }
+        
+        .shop-container {
+            width: 380px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+        
+        .shop-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+            border-bottom: 1px solid #f0f0f0;
+        }
+        
+        .shop-title {
+            font-size: 18px;
+            font-weight: bold;
+            color: #333;
+        }
+        
+        .arrow {
+            width: 24px;
+            height: 24px;
+            border: 1px solid #e4393c;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .arrow::before {
+            content: ">";
+            color: #e4393c;
+            font-size: 14px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+        
+        .arrow:hover {
+            background-color: #e4393c;
+        }
+        
+        .arrow:hover::before {
+            color: white;
+        }
+        
+        .shop-list {
+            padding: 10px 0;
+        }
+        
+        .shop-item {
+            display: flex;
+            padding: 15px 20px;
+            border-bottom: 1px solid #f5f5f5;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+        
+        .shop-item:hover {
+            background-color: #f9f9f9;
+        }
+        
+        .shop-image {
+            width: 60px;
+            height: 60px;
+            background-color: #f5f5f5;
+            border-radius: 4px;
+            margin-right: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #999;
+            font-size: 12px;
+            overflow: hidden;
+        }
+        
+        .shop-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .shop-info {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        
+        .shop-name {
+            font-size: 16px;
+            color: #333;
+            margin-bottom: 5px;
+        }
+        
+        .shop-tags {
+            display: flex;
+            align-items: center;
+            margin-bottom: 5px;
+        }
+        
+        .self-tag {
+            display: inline-block;
+            padding: 2px 5px;
+            background-color: #e4393c;
+            color: white;
+            font-size: 12px;
+            border-radius: 2px;
+            margin-right: 8px;
+        }
+        
+        .followers {
+            font-size: 14px;
+            color: #999;
+        }
+    </style>
+</head>
+<body>
+    <div class="shop-container">
+        <div class="shop-header">
+            <h2 class="shop-title">逛好店</h2>
+            <div class="arrow"></div>
+        </div>
+        
+        <div class="shop-list">
+            <div class="shop-item">
+                <div class="shop-image">
+                    <img src="images/1.jpg" alt="贝恩施旗舰店">
+                </div>
+                <div class="shop-info">
+                    <div class="shop-name">贝恩施京东自营官方旗舰店</div>
+                    <div class="shop-tags">
+                        <span class="self-tag">自营</span>
+                    </div>
+                    <div class="followers">277.9万人关注</div>
+                </div>
+            </div>
+            
+            <div class="shop-item">
+                <div class="shop-image">
+                    <img src="images/2.jpg" alt="美宝莲京东自营官方旗舰店"></img>
+                </div>
+                <div class="shop-info">
+                    <div class="shop-name">美宝莲京东自营官方旗舰店</div>
+                    <div class="shop-tags">
+                        <span class="self-tag">自营</span>
+                    </div>
+                    <div class="followers">192.9万人关注</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

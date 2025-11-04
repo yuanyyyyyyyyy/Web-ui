@@ -1,25 +1,37 @@
 <!-- 模仿京东的“逛好店”（样式使用引入链接方式），效果如下图。
  其中标题右侧的箭头的交互效果为：默认显示空心红箭头，鼠标移入后变为红色背景白色箭头。 -->
 
- <!DOCTYPE html>
- <html>
-    <head lang = "zh-CN>
-        <meta charset = "UTF-8">
-        <title>模仿京东的“逛好店”</title>
-    </head>
+<!DOCTYPE html>
+<html>
 
-    <body>
-        <h1> 逛好店</h1>
-        <img src = "Work3 html css\images\arrow.png" alt="images">
+<head lang="zh-CN">
+    <meta charset=" UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>模仿京东的“逛好店”</title>
+    <link rel="stylesheet" href="css/lab3-4.css" type="text/css">
+</head>
+
+<body>
+    <div class="container">
         <div>
-            贝恩施京东自营官方旗舰店
-            <img src = "Work3 html css\images\1.jpg" alt="images">
+            <h1> 逛好店</h1>
+            <img src="images\arrow.png" alt="images" class = 'arrow'>
         </div>
 
-        <div>
-            美宝莲京东自营官方旗舰店
-            <img src = "Work3 html css\images\2.jpg" alt="images">
+        <div class = 'shop1'>
+            <div>贝恩施京东自营官方旗舰店</div>
+            <div class = 'self'>自营</div>
+            <div class = 'follow'>277.9万人关注</div>
+            <img src="images\1.jpg" alt="images" class = 'image'>
         </div>
-    </body>
- </html>
 
+        <div class = 'shop2'>
+            <div>美宝莲京东自营官方旗舰店</div>
+            <div class = 'self'>自营</div>
+            <div class = 'follow'>192.9万人关注</div>
+            <img src="images\2.jpg" alt="images" class = 'image'>
+        </div>
+    </div>
+</body>
+
+</html>

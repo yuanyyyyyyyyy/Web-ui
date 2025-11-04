@@ -1,43 +1,57 @@
 <!-- 实现收货人信息的表单，实现如下图效果，且输入框获取焦点后，边框变为红色。 -->
 <!DOCTYPE html>
-<html lang="zh-CN>
-    <head> 
+<html lang="zh-CN">
+
+<head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
     <title>收货人信息表单</title>
-    <style>
-    </style>
-    </head>
+    <link rel="stylesheet" href="css/lab3-3.css" type="text/css">
+</head>
+
 </html>
 
 <body>
     <form>
-        <label> <div>收货人</div> </label>
-        <input type = "text" name = "收货人" >
+        <label>
+            <div class="form-label">收货人</div>
+            <input type="text" name="收货人">
+        </label>
 
-        <label> <div>手机号码</div> </label>
-        <input type = "text" name = "手机号码" >
-
-        <label> <div>所在地区</div> </label>
-        <input type = "text" name = "所在地区" >
 
         <label>
-            <div>详细地址</div>
-            <textarea name = "详细地址"> </textarea>
+            <div class="form-label">手机号码</div>
+            <input type="text" name="手机号码">
         </label>
 
-        <label> 
-            <div>标签</div>
-            <input type = "radio" name = "标签" value = "家" checked> 家
-            <input type = "radio" name = "标签" value = "公司"> 公司
-            <input type = "radio" name = "标签" value = "学校"> 学校
+
+        <label>
+            <div class="form-label">所在地区</div>
+            <input type="text" name="所在地区">
         </label>
 
-        <div> 
-            <input type = "checkbox" value = "设置为默认地址" checked> 设置为默认地址
-        </div>
 
-        <div>
-            <input type = "button" value = "提交">
+        <label>
+            <div class="form-label">详细地址</div>
+            <textarea name="详细地址"> </textarea>
+        </label>
+
+        <label>
+            <div class="form-label">标签</div>
+            <input type="radio" name="标签" value="家" checked> 家
+            <input type="radio" name="标签" value="公司"> 公司
+            <input type="radio" name="标签" value="学校"> 学校
+        </label>
+
+        <label>
+            <div class="form-label">
+                <input type="checkbox" value="设置为默认地址" checked> 设置为默认地址
+            </div>
+        </label>
+
+
+        <div >
+            <input type="button" value="提交" >
         </div>
     </form>
 

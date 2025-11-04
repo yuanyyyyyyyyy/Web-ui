@@ -1,0 +1,42 @@
+html, body{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    max-width: 600px;
+    margin:  50px auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px gray;
+
+}
+
+.follow{
+    color: gray;
+}
+
+.self{
+    border: 1px solid red;
+    width: 32px;
+    color: red;
+}
+
+.shop1{
+    border: 1px solid white;
+    background-color:rgba(243, 211, 234, 0.347);
+}
+
+.shop2{
+    border: 1px solid white;
+    background-color:rgba(191, 217, 236, 0.347);
+    margin-top:20px ;
+}
+
+.image{
+    width: 120px;
+    height: 120px;
+    text-align: right;
+}
