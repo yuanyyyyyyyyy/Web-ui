@@ -1,0 +1,40 @@
+.html{
+    font-size: 10px;
+    font-size: 62.5%;
+}
+
+/**
+ * 统一网站的字体颜色
+ */
+body{
+    color: #333;
+}
+
+/* 去掉常用标签的默认的内边距和外边距*/
+h1, h2, h3, h4, h5, h6, p, ul, ol, li, div, section, header, footer, nav, article{
+    margin: 0;
+    padding: 0;
+}
+
+/* 去掉常用标签的默认样式*/
+ul, ol{
+    list-style: none;
+}
+
+/* 去掉加粗 */
+strong{
+    font-weight: normal;
+}
+/* 去掉链接的下划线和设置默认颜色*/
+a{
+    text-decoration: none;
+    color: #333;
+}
+
+/* 图片的大小依据父容器自适应*/
+img{
+    height: auto;
+    width: auto;
+    max-width: 100%;
+    max-height: 100%;
+}

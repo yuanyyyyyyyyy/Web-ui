@@ -1,0 +1,75 @@
+/* 首页 */
+/* 页面布局的标签宽度自适应 */
+header, nav, section, article, footer{
+    width: 100%;
+}
+/*页面布局的固定宽度以及居中*/
+.w1200{
+    width: 500rem;
+    margin: 0 auto;
+}
+
+/* 1. 页面顶部*/
+header{
+    color:rgb(211, 205, 205);
+    /* background-color: #282828 */
+}
+
+/* 1.1 页面顶部信息栏 */
+.top-nav{
+    display: flex;
+    height:12rem;
+    align-items: right;
+    font-size: 1.2rem;
+}
+
+/* 弹性盒子重元素向右推*/
+.push-right{ 
+    height: 5rem;
+    margin-left: auto;
+    
+}
+
+.top-nav a{
+    font-size: 0.8rem;
+    color:#313F61;
+}
+
+/* 定义顶部信息栏中的链接竖线 */
+.top-nav a:not(:last-of-type)::after{
+    content: "|";
+    margin: 0 1rem;
+    display: inline-block;
+    color: rgb(211, 205, 205);
+}
+
+/* 1.2 页面的logo */
+div.logo{
+    height: 5rem;
+    display: flex;
+    align-items: center;
+}
+h1{
+    height: 3rem;
+}
+/* 2. 导航栏 */
+nav a{
+    display : block;
+    align-items: center;
+    height: 3rem;
+    line-height: 3rem;
+    color: #003e7d
+}
+
+nav ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(236, 230, 230);
+}
+
+
+/* 3. 页面主体 */
+
+/* 4. 页面底部 */
+
