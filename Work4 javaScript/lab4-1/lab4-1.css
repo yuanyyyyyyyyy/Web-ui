@@ -1,0 +1,45 @@
+body {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 30px;
+}
+
+.container {
+    width: max-content;
+    margin: 0 auto;
+    background-color: rgb(233, 252, 92);
+    padding: 20px 100px;
+}
+
+/* 星号样式 */
+.pattern {
+    text-align: center;
+    line-height: 1;
+    white-space: pre;
+}
+
+.pattern .star {
+    display: inline-block;
+    width: 1ch;
+}
+
+.pattern .blue {
+    color: #0b45d8;
+}
+
+/* 与示例接近的蓝色 */
+.pattern .red {
+    color: #e02828;
+}
+
+/* 与示例接近的红色 */
+
+/* 小屏自适应：减少字号 */
+@media (max-width:480px) {
+    body {
+        font-size: 20px
+    }
+
+    .container {
+        padding: 12px 30px
+    }
+}

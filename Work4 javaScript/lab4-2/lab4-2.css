@@ -1,0 +1,103 @@
+/*
+  lab4-2.css - 样式说明（详细注释）
+
+  目的：为动态生成的九九乘法表提供视觉样式，包括：
+    - 页面居中（使表格在视口中央）
+    - 单元格样式（边框、内边距、最小宽度）
+    - 鼠标悬停与高亮状态（单元格/整行/同列）
+    - 响应式调整（小屏时缩小单元格）
+
+  注意：文件与 lab4-2.js 协同工作。JS 会在 DOM 中创建 `.mul-row` 和 `.cell` 元素，
+  本 CSS 通过类选择器（如 `.cell.hover`, `.mul-row.row-hover`, `.cell.col-hover`）为这些
+  状态提供样式。
+*/
+
+/* ---------- 基本布局与重置 ---------- */
+html, body {
+    /* 使 body 高度占满视口，以方便用 flex 垂直水平居中 */
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    /* 使用 flex 将内容容器居中显示（水平和垂直居中） */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Microsoft YaHei', Arial, sans-serif;
+    background: #fff; /* 页面背景色 */
+}
+
+.container {
+    /* 容器宽度依据内部内容自适应（fit-content），使表格紧凑 */
+    width: fit-content;
+    text-align: center;
+    padding: 20px;
+}
+
+/* ---------- 乘法表整体与行样式 ---------- */
+
+.mul-row {
+    /* 每一行默认不换行（初始实现使用 inline-block 单元格），
+       JS 会向该元素中追加多个 .cell 元素 */
+    white-space: nowrap;
+}
+
+/* ---------- 单元格样式（默认） ---------- */
+.cell {
+    display: inline-block;               /* 与行内显示保持水平排列 */
+    border: 2px solid #2B5BCD;           /* 蓝色边框样式 */
+    padding: 6px 10px;                   /* 内边距 */
+    margin: 4px 6px;                     /* 单元格之间的水平/垂直间距 */
+    border-radius: 3px;                  /* 圆角 */
+    min-width: 100px;                    /* 保证单元格最小宽度，便于对齐 */
+    text-align: center;                  /* 文本居中 */
+    background: #fff;                    /* 默认背景 */
+    color: #003366;                      /* 默认文本颜色 */
+    transition: background .15s ease, color .15s ease, transform .08s ease; /* 平滑过渡 */
+    cursor: default;                     /* 非可点击，但可提示悬停效果 */
+    font-weight: 600;                    /* 字体加粗，便于阅读 */
+}
+
+/* ---------- 悬停与高亮状态（JS 会添加/移除这些类） ---------- */
+/* 鼠标悬停在单元格上的样式（最显眼） */
+.cell.hover {
+    background: #2B5BCD; /* 深蓝背景 */
+    color: #fff;         /* 白色文字 */
+    transform: translateY(-2px); /* 轻微抬起效果 */
+}
+
+/* 鼠标所在行的背景（较淡的高亮） */
+.mul-row.row-hover .cell {
+    background: #e8f0ff;
+}
+
+/* 鼠标所在列的高亮（用于标记相同乘数列） */
+.cell.col-hover {
+    background: #f0f7ff;
+    color: #003366;
+}
+
+/* 当一个单元格同时属于 col-hover 且自身在 hover 时，优先显示深色 */
+.cell.col-hover.hover {
+    background: #2B5BCD;
+    color: #fff;
+}
+
+/* ---------- 响应式调整：小屏时缩小单元格以避免换行 ---------- */
+@media (max-width:520px) {
+    .cell {
+        min-width: 80px;
+        padding: 6px 6px;
+        margin: 3px 4px;
+        font-size: 13px;
+    }
+}
+@media (min-width:500px) { 
+    .cell {
+        min-width: 80px;
+        padding: 6px 8px;
+        margin: 4px 6px;
+        font-size: 13px;
+    }
+}

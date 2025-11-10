@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<!--
+  Lab4-2: 九九乘法表（交互高亮）
+  文件说明：
+   - lab4-2.html : 页面结构（包含一个占位容器 #mul-table）
+   - lab4-2.css  : 样式，负责布局、单元格外观与高亮效果
+   - lab4-2.js   : 行为脚本，动态生成表格并处理鼠标交互
+  使用流程：浏览器加载 HTML -> 加载并应用 CSS -> 执行 JS，JS 会在 #mul-table 内生成 DOM 元素并添加事件
+-->
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab4-2 表格的创建与操作</title>
+    <!-- 引入样式：负责页面居中与单元格样式 -->
+    <link rel="stylesheet" href="lab4-2.css" type="text/css">
+</head>
+
+<body>
+    <!-- 页面主体容器 -->
+    <div class="page">
+        <div class="container">
+            <!--
+              占位容器：JS 脚本会使用 document.getElementById('mul-table') 获取此元素
+              并动态插入多行 div.mul-row，每行包含多个 div.cell。
+              选择使用 div 生成的原因是练习 DOM 操作；若需要可替换为语义化 <table> 结构。
+            -->
+            <div id="mul-table" class="mul-table">
+                <!-- JS 会在此处生成表格 -->
+            </div>
+        </div>
+    </div>
+
+    <!-- 引入脚本：在文档底部加载，脚本执行时 DOM 中的容器已存在 -->
+    <script src="lab4-2.js"></script>
+</body>
+
+</html>
