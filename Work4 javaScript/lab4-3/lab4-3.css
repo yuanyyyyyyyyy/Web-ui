@@ -1,0 +1,50 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+h2 {
+    text-align: center;
+    padding-top: 10px;
+}
+
+p {
+    text-align: center;
+    margin: 0 auto;
+    width: 90%;
+}
+
+.container {
+    background-color: aqua;
+    height: 33%;
+    min-width: 20px;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.result {
+    display: flex;
+    background-color: rgb(202, 197, 197);
+    width: 75%;
+    margin: 20px auto;
+    height: 40px;
+    padding: 20px;
+    border: 1px dotted goldenrod;
+    font-weight: bold;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    color: blue;
+}
+
+.no-result{
+    color: red;
+}
+
+input {
+    width: 60px;
+    box-sizing: border-box;
+}

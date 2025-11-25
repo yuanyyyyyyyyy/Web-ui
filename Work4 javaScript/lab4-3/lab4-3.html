@@ -1,23 +1,27 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lab4-3 循环解决鸡兔同笼问题</title>
+    <title>鸡兔同笼问题</title>
     <link rel="stylesheet" href="lab4-3.css" type="text/css">
 </head>
-<body>
-    <div class="container">
-        <h1>循环解决鸡兔同笼问题</h1>
-        <div>
-            <p>
-                鸡兔同笼，鸡兔一共 
-                <label>
-                    <input type = "type" 
-                </label>只 
-            </p>
-        </div>
 
+<body>
+    <div class="container" id = "container">
+        <h2>循环解决鸡兔同笼问题</h2>
+        <p>
+            鸡兔同笼，
+            <label for="totalheads">鸡兔一共</label>
+            <input type="number" id="totalheads" value=35>只。
+            <label for="totallegs">笼子里脚一共</label>
+            <input type="number" id="totallegs" value=94>只,请问分别有多少只鸡和兔？
+            <input type="button" value="计算" id = "calculateBtn" onclick="calculate()">
+        </p>
+        <div id = "result" class = "result"></div>
+    </div>
     <script src="lab4-3.js"></script>
 </body>
+
 </html>

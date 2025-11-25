@@ -15,25 +15,29 @@
 
     <!-- 1.页面头部 -->
     <header>
-        <!-- 1.1 顶部导航 -->
+        <!-- 顶部横栏：左 logo，右辅助链接与搜索 -->
+        <div class="header-top w1200">
             <div class="logo">
-                <h1 class = "w1200"><img src="images/title.png" alt="中国教育考试网"></h1>
+                <h1><img src="images/title.png" alt="中国教育考试网"></h1>
+            </div>
 
-                <div class="top-nav">
-                    <span class="push-right">
-                        <a href="#"> 关于我们</a>
-                        <a href="#"> ENGLISH</a>
-                        <div>
-                            <input type="text" placeholder="请输入关键字">
-                            <input type="submit" value="🔍">
-                        </div>
-                    </span>
+
+            <div class="top-nav">
+                <div>
+                    <a href="#">关于我们</a>
+                    <a href="#">ENGLISH</a>
+                </div>
+
+                <div class="search">
+                    <input type="text" placeholder="请输入关键字">
+                    <input type="submit" value="🔍">
                 </div>
             </div>
+        </div>
     </header>
 
     <!-- 2.页面导航 -->
-    <nav>
+    <nav class="w1200"> >
         <ul>
             <li><img src="images/导航栏首页.png" alt="首页"></li>
             <li><a href="#">考试资讯</a></li>
@@ -48,7 +52,7 @@
 
     <!-- 3. 页面主体 -->
     <main>
-        <!-- 轮播图 -->
+        <!-- 3.1 轮播图 -->
         <section>
             <img src="images/答卷人轮播图1.png" alt="答卷人"></img>
             <img src="images/体系轮播图2.png" alt="《中国高考评价体系》正式发布"></img>
@@ -56,8 +60,8 @@
         </section>
         <hr>
 
-        <!-- 考试咨询和公示公告区域 -->
-        <selection>
+        <!-- 3.2 考试咨询和公示公告区域 -->
+        <section>
             <section>
                 <h3>考试资讯</h3>
 
@@ -88,7 +92,7 @@
                 <a href="#">更多&gt;&gt;</a>
             </section>
             <hr>
-        </selection>
+        </section>
 
 
         <!-- 左边区域 -->
@@ -233,21 +237,28 @@
         <hr>
 
 
-        <selection>
+        <section>
             <img src="images/底部1.png" alt="《中国考试》杂志"></img>
             <img src="images/底部2.png" alt="国家外语能力测试体系"></img>
             <img src="images/底部3.png" alt="自学考试分会"></img>
-        </selection>
+        </section>
 
     </main>
     <hr>
 
     <!-- 4. 页面底部 -->
     <footer>
-        <p>主办单位：教育部教育考试院　　</p>
-        <p>京ICP备05064772号-1　　 京公网安备 11040202430017号</p>
-        <p>建议您使用Edge、Chrome、Firefox、360等主流浏览器浏览本网站</p>
-        <p>友情链接：中华人民共和国教育部 省级教育考试机构</p>
+        <div>
+            <img src="images/事业单位.png" alt="事业单位"></img>
+        </div>
+
+        <div>
+            <p>主办单位：教育部教育考试院　　</p>
+            <address>京ICP备05064772号-1　　 京公网安备 11040202430017号</address>
+            <p>建议您使用Edge、Chrome、Firefox、360等主流浏览器浏览本网站</p>
+            <p>友情链接：中华人民共和国教育部 省级教育考试机构</p>
+        </div>
+
     </footer>
 
 </body>
