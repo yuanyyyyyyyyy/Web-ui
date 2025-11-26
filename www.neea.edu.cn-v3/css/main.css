@@ -1,0 +1,221 @@
+/* 页面基础布局 */
+header,
+nav,
+main,
+section,
+article,
+footer {
+    width: 100%;
+}
+
+/* 1200px 中心容器 */
+.w1200 {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* 1. 顶部 header 区域 */
+header {
+    background: #fff;
+}
+
+.header-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* logo左，top-nav右 */
+    padding: 14px 0;
+}
+
+.header-top .logo {
+    flex: 0 0 auto;
+}
+
+.header-top .logo h1 {
+    margin: 0;
+}
+
+.header-top .logo img {
+    height: 56px;
+    max-height: 56px;
+    display: block;
+}
+
+.top-nav {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 1.4rem;
+    color: #313F61;
+    flex: 0 0 auto;
+    flex-wrap: wrap;
+}
+
+.top-nav a {
+    color: rgb(49, 63, 97);
+    white-space: nowrap;
+    font-size: 0.8rem;
+    align-items: flex;
+}
+
+.top-nav .search {
+    display: flex;
+    gap: 6px;
+    flex-basis: 100%;
+}
+
+.top-nav input[type="text"] {
+    padding: 0px 5px;
+    border: 1px solid #ddd;
+    border-radius: 2px;
+    font-size: 1.4rem;
+    width: 160px;
+    cursor:auto;
+}
+
+.top-nav input[type="submit"] {
+    padding: 0px 5px;
+    background: #ff8a00;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+/* 导 航栏 */
+nav {
+    background: #eef3f8;
+    border-top: 4px solid #f27b21;
+}
+
+nav .w1200 {
+    display: flex;
+    /* align-items: center; */
+    justify-content: center; 
+    height: 60px;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    margin: 0;
+    padding: 0 10px;
+    list-style: none;
+}
+
+nav ul li {
+    display: flex;
+    align-items: center;
+}
+
+nav ul li img {
+    display: flex;
+    height: 60px;
+}
+
+nav a {
+    color: #003e7d;
+    font-size: 1.5rem;
+}
+
+/* 轮播区 */
+section.carousel {
+    margin: 18px 0;
+}
+
+section.carousel img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    display: block;
+}
+
+/* 主体两栏布局 */
+main>.w1200 {
+    display: flex;
+    gap: 28px;
+    align-items: flex-start;
+    padding: 18px 0;
+}
+
+.main-left {
+    flex: 1;
+}
+
+.sidebar {
+    width: 320px;
+}
+
+.main-left h1,
+.main-left h3 {
+    color: #003e7d;
+    margin-bottom: 10px;
+}
+
+.main-left p {
+    color: #666;
+    line-height: 1.8;
+}
+
+.sidebar h1 {
+    font-size: 1.8rem;
+    color: #f27b21;
+    margin-bottom: 8px;
+}
+
+.sidebar div {
+    margin-bottom: 12px;
+}
+
+.sidebar img {
+    height: 36px;
+    vertical-align: middle;
+    margin-right: 8px;
+}
+
+/* 通用水平线样式 */
+hr {
+    border: none;
+    border-top: 1px solid #e6e6e6;
+    margin: 12px 0;
+}
+
+/* 底部图片区 */
+section.brand-row img {
+    width: 32%;
+    display: inline-block;
+    margin-right: 1%;
+}
+
+/* footer */
+footer {
+    background: #f6f6f6;
+    padding: 18px 0;
+    color: #666;
+    font-size: 1.2rem;
+}
+
+footer img {
+    height: 46px;
+    vertical-align: middle;
+    margin-right: 8px;
+}
+
+/* 小屏自适应（基础） */
+@media (max-width: 900px) {
+    .w1200 {
+        padding: 0 12px;
+    }
+
+    main>.w1200 {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+    }
+
+    nav ul {
+        gap: 12px;
+        overflow: auto;
+    }
+}

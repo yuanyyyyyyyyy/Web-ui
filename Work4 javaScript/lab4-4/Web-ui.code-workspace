@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "../.."
+		},
+		{
+			"path": "../../../../../College/大三/大三上/Web用户界面/xxxy.jju.edu.cn-v1"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "Web-ui"
+	}
+}
