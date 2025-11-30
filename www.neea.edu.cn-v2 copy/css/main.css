@@ -296,7 +296,7 @@ nav ul li:not(:first-child) a.active {
 /* Tabs 控件样式 */
 .news-tabs{
     display:flex;
-    justify-content:flex-right;
+    justify-content:flex-end;
     gap:8px;
     margin-bottom:8px;
 }
@@ -423,39 +423,9 @@ main>.w1200 {
 .sidebar div {
     margin-bottom: 12px;
 }
-.sidebar a{
-     color: gray;
-     font-size: 0.6rem;
-}
-
-/* 最简单稳定的方案 */
-.service-links {
-    margin-top: 6px;
-    padding-left: 32px;
-    color: #666;
-    font-size: 0.6rem;
-    line-height: 1.6;
-}
-
-.service-links a {
-    color: inherit;
-    font-size: inherit;
-    text-decoration: none;
-    display: inline;
-}
-
-.service-links a:hover {
-    color: #f27b21;
-}
-
-/* 手动添加分隔符 */
-.service-links a:not(:last-child)::after {
-    content: " | ";
-    color: #666;
-}
 
 .sidebar img {
-    height: 27px;
+    height: 36px;
     vertical-align: middle;
     margin-right: 8px;
 }
@@ -469,7 +439,7 @@ hr {
 
 /* 底部图片区 */
 section.brand-row img {
-    width: 30%;
+    width: 32%;
     display: inline-block;
     margin-right: 1%;
 }
@@ -477,14 +447,13 @@ section.brand-row img {
 /* footer */
 footer {
     background: #f6f6f6;
-    padding: 10px 0;
+    padding: 18px 0;
     color: #666;
-    font-size: 0.6rem;
-
+    font-size: 1.2rem;
 }
 
 footer img {
-    height: 30px;
+    height: 46px;
     vertical-align: middle;
     margin-right: 8px;
 }
