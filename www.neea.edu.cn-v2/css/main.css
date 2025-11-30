@@ -208,124 +208,36 @@ nav ul li:not(:first-child) a.active {
     }
 }
 
-/* 新闻 / 公示两栏区域 */
-.news-area {
-    display: flex;
-    gap: 28px;
-    align-items: flex-start;
-    padding: 18px 0 6px 0;
-}
-.news-area .news-left {
-    flex: 2 1 0;
-}
-.news-area .news-right {
-    flex: 1 1 320px;
-}
-.news-area h3 {
-    color: #f27b21;
-    font-size: 1.3rem;
-    margin: 0 0 8px 0;
-    padding-bottom: 6px;
-    border-bottom: 3px solid #003e7d;
-}
-.news-left h4 {
-    font-size: 1.1rem;
-    margin: 6px 0 8px 0;
-    color: #222;
-}
-.news-left p {
-    color: #666;
-    line-height: 1.6;
-    margin-bottom: 10px;
-}
-.news-list {
-    list-style: none;
-    padding-left: 0;
-    margin: 8px 0 0 0;
+/* 修改网格布局 */
+.news-list,
+.announce-list {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 8px 18px;
-}
-.news-list li {
-    padding-left: 12px;
-    border-left: 8px solid #f27b21;
-    color: #333;
-    font-size: 0.95rem;
-}
-.news-right .announce-list {
-    list-style: none;
-    padding: 0;
-    margin: 0 0 8px 0;
-}
-.news-right .announce-list li{
-    display:flex;
-    justify-content:space-between;
-    align-items:flex-start;
-    padding: 8px 0;
-    border-bottom: 1px dashed #eee;
-    font-size: 0.95rem;
-    color: #333;
-    position: relative;
-}
-.news-right .announce-list li::before{
-    content: '';
-    width: 10px;
-    height: 10px;
-    background: #f27b21;
-    display: inline-block;
-    margin-right: 10px;
-    flex: 0 0 auto;
-    border-radius: 2px;
-    position: absolute;
-    left: 0;
-    top: 12px;
-}
-.news-right .announce-list .date{
-    color: #999;
-    font-size: 0.85rem;
-    white-space: nowrap;
-    margin-left: 10px;
-}
-.news-right .announce-list li span:first-child{ padding-left: 18px; }
-.news-right .more{
-    display: inline-block;
-    margin-top: 8px;
-    color: #f27b21;
+    grid-template-columns: repeat(2, 1fr); /* 调整列数，确保图片不会挤在一起 */
+    gap: 20px; /* 适当增加间距 */
+    align-items: center; /* 确保图片和文本垂直居中 */
 }
 
-/* Tabs 控件样式 */
-.news-tabs{
-    display:flex;
-    justify-content:flex-right;
-    gap:8px;
-    margin-bottom:8px;
-}
-.news-tabs .tab{
-    background: transparent;
-    border: none;
-    color: #003e7d;
-    padding: 6px 10px;
-    cursor: pointer;
-    font-size: 0.95rem;
-    border-radius: 2px;
-}
-.news-tabs .tab.active{
-    color: #ff8a00;
-    font-weight: 700;
+/* 确保图片大小合适 */
+.news-image,
+.announce-image {
+    width: 100%; /* 确保图片填满容器 */
+    max-height: 200px; /* 设置最大高度，防止图片过大 */
+    object-fit: cover; /* 图片按比例裁剪填充容器 */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* 隐藏类，切换时使用 */
-.news-area [hidden], .news-area .hidden{ display: none !important; }
-.news-right .more{
-    display: inline-block;
-    margin-top: 8px;
-    color: #f27b21;
+/* 响应式布局（小屏幕显示单列） */
+@media (max-width: 900px) {
+    .news-area {
+        flex-direction: column; /* 小屏幕上改为竖排 */
+    }
+
+    .news-list {
+        grid-template-columns: 1fr; /* 变为单列 */
+    }
 }
 
-@media (max-width: 900px){
-    .news-area{ flex-direction: column; }
-    .news-list{ grid-template-columns: 1fr; }
-}
 
 /* Arrows and dots (JS-enabled carousel controls) */
 .carousel.js-enabled .slides { animation: none; }
@@ -477,14 +389,13 @@ section.brand-row img {
 /* footer */
 footer {
     background: #f6f6f6;
-    padding: 10px 0;
+    padding: 18px 0;
     color: #666;
     font-size: 0.6rem;
-
 }
 
 footer img {
-    height: 30px;
+    height: px;
     vertical-align: middle;
     margin-right: 8px;
 }
