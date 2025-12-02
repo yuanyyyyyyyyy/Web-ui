@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>学生信息管理系统</title>
+    <link rel="stylesheet" href="style.css"></link>
+</head>
+<body>
+    <div class="container">
+        <h1>🎓 学生信息列表</h1>
+        
+        <div id="loading" class="loading">
+            ⏳ 正在加载学生数据...
+        </div>
+        
+        <!-- <div id="error" class="error">
+             数据加载失败，请检查JSON Server是否运行
+        </div> -->
+        
+        <table id="studentsTable" class="students-table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>姓名</th>
+                    <th>年龄</th>
+                    <th>专业</th>
+                    <th>年级</th>
+                </tr>
+            </thead>
+            <tbody id="tableBody">
+                <!-- 数据将通过JavaScript动态插入 -->
+            </tbody>
+        </table>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>学生信息管理系统 - 完整CRUD</title>
+    <style>
+        /* CSS代码将放在这里 */
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>学生信息管理系统</h1>
+        
+        <!-- 新增学生表单 -->
+        <div class="form-section">
+            <h2>添加新学生</h2>
+            <form id="addStudentForm" class="student-form">
+                <div class="form-group">
+                    <label for="name">姓名:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="age">年龄:</label>
+                    <input type="number" id="age" name="age" min="16" max="30" required>
+                </div>
+                <div class="form-group">
+                    <label for="major">专业:</label>
+                    <input type="text" id="major" name="major" required>
+                </div>
+                <div class="form-group">
+                    <label for="grade">年级:</label>
+                    <select id="grade" name="grade" required>
+                        <option value="">请选择年级</option>
+                        <option value="大一">大一</option>
+                        <option value="大二">大二</option>
+                        <option value="大三">大三</option>
+                        <option value="大四">大四</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-primary">添加学生</button>
+            </form>
+        </div>
+
+        <!-- 编辑学生表单 (默认隐藏) -->
+        <div id="editFormSection" class="form-section" >
+            <h2>编辑学生信息</h2>
+            <form id="editStudentForm" class="student-form">
+                <input type="hidden" id="editId" name="id">
+                <div class="form-group">
+                    <label for="editName">姓名:</label>
+                    <input type="text" id="editName" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="editAge">年龄:</label>
+                    <input type="number" id="editAge" name="age" min="16" max="30" required>
+                </div>
+                <div class="form-group">
+                    <label for="editMajor">专业:</label>
+                    <input type="text" id="editMajor" name="major" required>
+                </div>
+                <div class="form-group">
+                    <label for="editGrade">年级:</label>
+                    <select id="editGrade" name="grade" required>
+                        <option value="大一">大一</option>
+                        <option value="大二">大二</option>
+                        <option value="大三">大三</option>
+                        <option value="大四">大四</option>
+                    </select>
+                </div>
+                <div class="form-actions">
+                    <button type="submit" class="btn btn-success">保存修改</button>
+                    <button type="button" id="cancelEdit" class="btn btn-secondary">取消</button>
+                </div>
+            </form>
+        </div>
+
+        <!-- 学生列表 -->
+        <div class="list-section">
+            <h2>学生列表</h2>
+            
+            <table id="studentsTable" class="students-table" >
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>姓名</th>
+                        <th>年龄</th>
+                        <th>专业</th>
+                        <th>年级</th>
+                        <th>操作</th>
+                    </tr>
+                </thead>
+                <tbody id="tableBody">
+                    <!-- 数据将通过JavaScript动态插入 -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- 删除确认对话框 -->
+    <div id="deleteModal" class="modal" >
+        <div class="modal-content">
+            <h3>确认删除</h3>
+            <p>您确定要删除学生 <span id="deleteStudentName" class="delete-name"></span> 吗？</p>
+            <div class="modal-actions">
+                <button id="confirmDelete" class="btn btn-danger">确认删除</button>
+                <button id="cancelDelete" class="btn btn-secondary">取消</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // JavaScript代码将放在这里
+    </script>
+</body>
+</html>
